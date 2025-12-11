@@ -1,0 +1,6 @@
+vtk==9.4.1
+wslink==2.2.2
+numpy~=2.2.4
+astropy~=7.0.1
+spectral-cube~=0.6.6
+./libs/astromodules-0.1-py3-none-any.whl

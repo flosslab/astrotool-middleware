@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools", "wheel", "poetry-core", "poetry-plugin-export"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "astrotool-middleware"
+version = "0.9.0"
+description = ""
+authors = []
+
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+
+vtk = "==9.4.1"
+wslink = "==2.2.2"
+numpy = "==2.2.4"
+astropy = "==7.0.1"
+spectral-cube = "==0.6.6"
+
+[tool.poetry.scripts]
+astrotool-api = "astrotool_middleware:main.main_cli"
+
+[tool.black]
+target-version = ["py312"]
+line-length = 120
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+log_cli = true
+pythonpath = [
+    "test", "src"
+]
